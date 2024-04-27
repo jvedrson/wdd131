@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  grid-template: auto 1fr auto / repeat(12, 1fr);
+  font-family: 'Roboto Condensed';
+}
+
+header {
+  background: lightpink;
+  grid-column: 1 / -1;
+  grid-template-rows: repeat(3, 1fr);
+  background-color: #333333;
+  color: #ffffff;
+}
+
+header > div {
+  padding: 0.5rem;
+  height: 3rem;
+}
+
+.navigation {
+  list-style: none;
+  display: flex;
+  background-color: #333;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+}
+.navigation li {
+  flex: 1 1 auto;
+}
+.navigation a {
+  display: block;
+  color: #eee;
+  padding: 0.75rem;
+  text-decoration: none;
+  text-align: center;
+}
+.navigation a:hover {
+	text-decoration: underline;
+	text-decoration-color: rgb(255, 0, 0);
+}
+
+main {
+  background: #cccccc;
+  grid-column: 1 / 10;
+  padding: 0.5rem;
+}
+
+.right-sidebar {
+  background: yellow;
+  grid-column: 10 / -1;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+footer {
+  background: #333333;
+  padding: 0.5rem;
+  text-align: center;
+  grid-column: 1 / -1;
+  height: 6rem;
+  color: #ffffff;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
