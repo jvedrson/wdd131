@@ -75,13 +75,12 @@ main {
   background-color: var(--accent1-color);
   color: white;
   font-weight: 900;
-  font-size: 2em;
 }
 .card-container {
   background-color: white;
   border-radius: 0px 0px 20px 20px;
   height: 100%;
-  font-size: 1.6em;
+  font-size: 1.4em;
   display: flex;
   flex-direction: column;
   justify-content: center;
