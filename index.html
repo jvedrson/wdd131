@@ -1,11 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WDD 131</title>
+  <meta name="author" content="WDD 131 - Dynamic Web Fundamentals - Ederson Villalba">
+  <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Ederson Villalba The purpose and content of this website is made for educational and developmental learning purposes only.">
+  <title>WDD 131 - Ederson Villalba</title>
+  <link rel="stylesheet" href="./styles/base.css">
+  <script src="./scripts/getdates.js" defer></script>
 </head>
+
 <body>
-  <h1>WDD 131 - Ederson Villalba</h1>
+  <header>
+    <div>
+      <h1>WDD 131: Dynamic Web Fundamentals - <span class="color-name">Ederson Villalba</span></h1>
+    </div>
+    <nav>
+      <ul class="navigation wrap">
+        <li><a target="_blank" href="https://ve.linkedin.com/in/ederson-villalba-85576111a" title="LinkedIn">LinkedIn</a></li>
+        <li><a target="_blank" href="https://byui.instructure.com/" title="I-Learn">I-Learn</a></li>
+        <li><a target="_blank" href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/88?lang=eng&id=p18#p18" title="Scripture ">Scripture</a></li>
+        <li><a target="_blank" href="#" title="Final Project">Final Project</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="card about-me">
+      <div class="card-title">
+        <h3>About Me</h3>
+      </div>
+      <div class="card-container">
+        <div class="about-item">
+          <div class="about-item-content">
+            <p>Hello, I am <b>Ederson Villalba</b>, I was born in Venezuela and I live in the state of Bolivar. I have been passionate about
+            technology since I was very young, so I focused my studies on programming by studying Computer Engineering at the
+            University known as UNEG. I currently work as a Backend developer and continue to learn as I go.</p>
+            <img src="./images/me.jpg" alt="Personal photo">
+          </div>          
+        </div>
+
+        <div class="about-item">
+          <div class="about-item-title">
+            <code>Bolívar, Venezuela</code>
+          </div>
+          <div class="about-item-content">
+            <figure>
+              <img src="./images/flag-venezuela.png" alt="Venezuela's flag">
+              <figcaption>(Venezuela's flag)</figcaption>
+            </figure>
+            <div>
+              <p>I currently live in Ciudad Guayana specifically in the Puerto Ordaz area, I moved with my wife a couple of years ago
+              when we got married, we did not decide to leave the state so as not to get so far from the family, so we are about 30
+              minutes from them <span>&#128517;</span>.</p>
+              <p>Something interesting about the city is the union of two rivers (Caroní &
+              Orinoco) which do not mix and <a href="https://steemit.com/nature/@mjzo/legend-of-a-simply-beautiful-love-the-union-of-the-caroni-river-and-the-orinoco-river-in-venezuela" target="_blank">you can notice the difference</a>.</p>
+            </div>
+          </div>          
+        </div>
+      </div>
+    </section>
+    <section class="card resources">
+      <div class="card-title">
+        <h3>Web Dev Resources</h3>
+      </div>
+      <div class="card-container">
+        <div class="resources-items">
+          <ul>
+            <li><a href="https://github.com/" target="_blank">Git Hub</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a></li>
+            <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
+            <li><a href="https://codepen.io/" target="_blank">CodePen</a></li>
+            <li><a href="https://css3generator.com/" target="_blank">CSS3 Generator</a></li>
+            <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a></li>
+            <li><a href="https://css-tricks.com/" target="_blank">Css Tricks</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div>
+      <p>©<span id="currentyear"></span> - <span class="color-name">Ederson Villalba</span>, Venezuela</p>
+      <p>Last update: <span id="lastModified"></span></p>
+    </div>    
+  </footer>
 </body>
+
 </html>
