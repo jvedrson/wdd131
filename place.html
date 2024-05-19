@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="WDD 131 - Ederson Villalba">
+  <meta name="description"
+    content="This assignment applies the concepts presented in the learning activities to a page that is responsive in small and larger views.">
+  <title>Guayana City</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/place.css">
+</head>
+
+<body>
+  <header>
+    <h1>Guayana City</h1>
+  </header>
+  <main>
+    <div class="hero">
+      <picture>
+        <source srcset="images/hero-small.webp" media="(max-width: 794px)">
+        <img srcset="images/hero-large.webp" alt="Guayana city">
+      </picture>
+    </div>
+    <section class="card-data">
+      <div class="card card-container">
+        <div class="card-title">
+          <h2>Data</h2>
+        </div>
+        <table class="card-body">
+          <tr>
+            <th>Area:</th>
+            <td>240,000 sq kms</td>
+          </tr>
+          <tr>
+            <th>Population:</th>
+            <td>850,000</td>
+          </tr>
+          <tr>
+            <th>Capital:</th>
+            <td>Bolívar City</td>
+          </tr>
+          <tr>
+            <th>Languages:</th>
+            <td>Spanish</td>
+          </tr>
+          <tr>
+            <th>Currency:</th>
+            <td>Venezuelan Bolívar (VEF)</td>
+          </tr>
+          <tr>
+            <th>Time Zone:</th>
+            <td>UTC -4:30</td>
+          </tr>
+          <tr>
+            <th>Calling code:</th>
+            <td>+58</td>
+          </tr>
+          <tr>
+            <th>Internet TLD:</th>
+            <td>.ve</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <section class="card-weather">
+      <div class="card card-container">
+        <div class="card-title">
+          <h2 id="weather-title">Weather</h2>
+        </div>
+        <table class="card-body">
+          <tr>
+            <th>Temperature:</th>
+            <td>32 °C</td>
+          </tr>
+          <tr>
+            <th>Conditions:</th>
+            <td>Partly sunny</td>
+          </tr>
+          <tr>
+            <th>Wind:</th>
+            <td>14 km/h</td>
+          </tr>
+          <tr>
+            <th>Wind Chill:</th>
+            <td id="windchill"></td>
+          </tr>
+        </table>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div>
+      <p>©<span id="currentyear"></span> - <span class="color-name">Ederson Villalba</span>, Venezuela</p>
+      <p>Last update: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/place.js" defer></script>
+</body>
+
+</html>

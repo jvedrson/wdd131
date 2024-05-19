@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #014e52;
+  --second-color: #e3e3e3;
+  --accent1-color: #db2222;
+}
+
+body {
+  font-family: "Ubuntu Sans Mono", monospace;
+}
+
+header {
+  min-height: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--primary-color);
+  color: var(--second-color);
+  text-align: center;
+  align-self: center;
+  padding: 1rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.hero {
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card {
+  background-color: var(--second-color);
+  opacity: 0.9;
+  padding: 1.5rem;
+}
+.card-container {
+  height: fit-content;
+}
+.card-title {
+  background-color: var(--accent1-color);
+  color: var(--second-color);
+  position: relative;
+  left: -2.5rem;
+  padding: 1rem;
+}
+.card-body {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+th {
+  font-weight: bolder;
+  text-align: right;
+}
+td {
+  text-align: left;
+}
+
+.card-data {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin-left: 5rem;
+  max-width: 450px;
+  align-self: center;
+  justify-self: left;
+  padding: 1rem;
+}
+
+.card-weather {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  margin-right: 5rem;
+  max-width: 450px;
+  align-self: center;
+  justify-self: right;
+  padding: 1rem;
+}
+#weather-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#weather-title::after {
+  background: url("../images/sandstorm_sun_icon.svg") no-repeat;
+  content: "";
+  width: 50px;
+  height: 50px;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--second-color);
+  padding: 0.5rem;
+  min-height: 6rem;
+  align-content: center;
+  text-align: center;
+  font-size: 1.4em;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 794px) {
+  main {
+    display: block;
+  }
+  .card {
+    padding: 1rem;
+  }
+  .card-title {
+    left: 0;
+    text-align: center;
+    background-color: var(--second-color);
+    color: black;
+  }
+  .card-body {
+    margin: 0;
+  }
+  .card-weather,
+  .card-data {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  #weather-title {
+    flex-direction: column;
+  }
+  #weather-title::after {
+    background: url("../images/sunrise_icon.svg") no-repeat;
+    content: "";
+    width: 70px;
+    height: 70px;
+  }
+}
