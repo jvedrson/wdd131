@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="WDD 131 - Ederson Villalba">
+  <meta name="description"
+    content="This assignment applies the concepts presented in the learning activities to filter temples.">
+  <title>Filtered Temples Album</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/filtered-temples.css" media="all">
+</head>
+
+<body>
+  <header>
+    <h1>Filtered Temples Album</h1>
+    <button id="menu"></button>
+    <nav>
+      <ul class="navigation wrap">
+        <li><a class="active" href="#" title="Home">Home</a></li>
+        <li><a href="#" title="Old">Old</a></li>
+        <li><a href="#" title="New">New</a></li>
+        <li><a href="#" title="Large">Large</a></li>
+        <li><a href="#" title="Small">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2 id="page">Home</h2>
+    <div class="container"></div>
+  </main>
+  <footer>
+    <div>
+      <p>©<span id="currentyear"></span> - <span class="color-name">Ederson Villalba</span>, Venezuela</p>
+      <p>Last update: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/filtered-temples.js" defer></script>
+</body>
+
+</html>
