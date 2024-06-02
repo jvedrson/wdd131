@@ -2,9 +2,8 @@
   --primary-color: #003049;
   --secondary-color: #12645b;
   --accent1-color: #ffffff;
-  --accent2-color: #af1d03;
-  --accent3-color: #000000;
-  --accent4-color: #ccc;
+  --accent2-color: #000000;
+  --accent3-color: #ccc;
 }
 
 body {
@@ -28,7 +27,7 @@ h4,
 h5,
 h6 {
   font-family: Arial, Helvetica, sans-serif;
-  color: var(--accent3-color);
+  color: var(--accent2-color);
 }
 
 h2 {
@@ -55,7 +54,7 @@ header>h2 {
 
 p {
   font-family: Arial, Helvetica, sans-serif;
-  color: var(--accent3-color);
+  color: var(--accent2-color);
   padding: 1em;
 }
 
@@ -69,7 +68,7 @@ p {
   padding: 5px;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
-  color: var(--accent3-color);
+  color: var(--accent2-color);
 }
 
 .colors {
@@ -109,15 +108,10 @@ p {
 
 .accent3 {
   background-color: var(--accent3-color);
-  color: var(--accent1-color);
-}
-
-.accent4 {
-  background-color: var(--accent4-color);
 }
 
 p.colored {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   color: var(--accent1-color);
 }
 
@@ -158,14 +152,10 @@ nav a:hover {
 
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 3em 1.5em 1.5em 3em;
-  /* grid-template-areas: ". . . home home . . ."
-  ". . . . top . . ."
-  ". left left left right right right ."
-  "page2 . page3 . . page4 . page5"; */
   grid-template-areas: ". . . . . home home . . . . ."
-". . . . . . top . . . . ."
-". left2 left2 left2 left left right right right2 right2 right2 ."
-"page2 page2 . page3 page3 . . page4 page4 . page5 page5";
+  ". . . . . . top . . . . ."
+  ". left2 left2 left2 left left right right right2 right2 right2 ."
+  "page2 page2 . page3 page3 . . page4 page4 . page5 page5";
 }
 
 .sitemap>div {
