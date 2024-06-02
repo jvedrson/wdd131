@@ -1,0 +1,97 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+}
+
+.card {
+  backdrop-filter: blur(3px);
+  background-color: var(--accent2-color);
+  width: 100%;
+  height: 100%;
+  min-width: 275px;
+  min-height: 412.5px;
+  cursor: pointer;
+}
+
+.card-normal {
+  display: block;
+  backdrop-filter: blur(3px);
+  background-color: var(--accent3-color);
+  min-width: 275px;
+  min-height: 412.5px;
+}
+.card-normal > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-width: 275px;
+  min-height: 412.5px;
+}
+
+.card-hover {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  background-color: var(--accent2-color);
+  color: var(--accent1-color);
+  height: 100%;
+  min-width: 275px;
+  min-height: 412.5px;
+  padding: 0.5rem;
+  transition: all 0.3s ease-out;
+  text-decoration: none;
+}
+.card-hover > h3 {
+  color: var(--accent1-color);
+  font-size: x-large;
+}
+.card-hover > .card-info > p {
+  color: var(--accent3-color);
+}
+.card-hover > .card-info > p > span {
+  font-weight: bolder;
+  color: var(--accent1-color);
+}
+.card-hover:hover {
+  opacity: 1;
+}
+
+svg {
+  user-select: none;
+  pointer-events: none;
+}
+
+/* CSS Layout footer */
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+  .card {
+    transition: 0.5s;
+  }
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 864px) {
+  .card {
+    transition: 0.5s;
+  }
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 864px) and (max-width: 1170px) {
+  .card {
+    transition: 0.5s;
+  }
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

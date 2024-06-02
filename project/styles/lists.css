@@ -1,0 +1,38 @@
+.list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 2rem 0;
+}
+
+.list-name {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.list-name svg {
+  margin-right: 1rem;
+}
+
+.my-list,
+.my-list-like,
+.my-list-nolike {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.card {
+  width: 275px;
+  height: 412.5px;
+}
+
+@media (max-width: 864px) {
+  .list-container {
+    align-items: center;
+  }
+  .list-name {
+    flex-direction: column;
+  }
+}
