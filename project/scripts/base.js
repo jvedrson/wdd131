@@ -274,9 +274,9 @@ function convertTimestampToDateTime(unix_timestamp) {
   if (months)
     return months > 1 ? `${months} months ago` : `${months} month ago`;
 
-  if (currentDateMonth - dateMonth) {
-    const diffTime = Math.abs(date - now);
-    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+  const diffTime = Math.abs(date - now);
+  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+  if (diffDays) {
     return diffDays > 1 ? `${diffDays} days ago` : `${diffDays} day ago`;
   }
 

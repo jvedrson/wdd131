@@ -189,7 +189,7 @@ function renderComments() {
     if (movie) {
       movie.comments.forEach((c) => {
         html += `<div class="comment">
-          <h3>${c.user}</h3>
+          <h4>${c.user}</h4>
           <small>${convertTimestampToDateTime(c.timestamp)}</small>
           <p>${c.message}</p>
         </div>`;
@@ -200,7 +200,7 @@ function renderComments() {
     }
   }
   document.querySelector(".comment-items").innerHTML =
-    "There are no comments on this movie yet";
+    '<div class="no-comments"><span>There are no comments on this movie yet</span></div.';
 }
 
 function addComment(user, message) {
@@ -299,7 +299,6 @@ function setEventListeners() {
     const message = formData.get("comment");
 
     if (!user || !message) {
-      alert("To add a comment you must fill out the form");
       return;
     }
     addComment(user, message);
