@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", sans-serif;
+}
+
+:root {
+  --primary-color: #0c2a3e;
+  --second-color: #e3e3e3;
+  --accent1-color: #db2222;
+  --background-color: #a6c0d1;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", sans-serif;
+  font-size: small;
+  display: grid;
+  grid-template: repeat(12, 1fr) / repeat(12, 1fr);
+}
+
+header {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  background-color: var(--primary-color);
+  color: var(--second-color);
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  grid-column: 1/-1;
+  grid-row: 2/12;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 350px;
+  min-width: 350px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  border-radius: 6px;
+}
+
+.bg-container {
+  background-color: var(--background-color);
+}
+
+form {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+form fieldset {
+  border: none;
+}
+form fieldset legend {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+form fieldset legend span {
+  color: var(--primary-color);
+}
+form fieldset legend span.field-required {
+  color: black;
+}
+
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+  padding: 0.5rem;
+  border-radius: 3px;
+  width: 100%;
+  border: none;
+}
+
+.rating {
+  display: flex;
+  justify-content: space-around;
+}
+.rating label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: small;
+}
+.rating label input {
+  height: 1rem;
+}
+
+#checkbox label {
+  display: block;
+}
+
+textarea {
+  resize: none;
+}
+
+#handleSubmit {
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  padding: 0.5rem 0;
+  background-color: var(--second-color);
+  font-size: large;
+  display: inline-block;
+  border-radius: 6px;
+  border: none;
+}
+#handleSubmit:hover {
+  background-color: var(--primary-color);
+  color: var(--second-color);
+}
+
+.btn-review {
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  background-color: var(--accent1-color);
+  color: var(--second-color);
+  min-width: 60px;
+  font-size: medium;
+  display: inline-block;
+  border-radius: 6px;
+}
+
+footer {
+  grid-column: 1/-1;
+  grid-row: 12/-1;
+  background-color: var(--primary-color);
+  color: var(--second-color);
+  padding: 0.5rem;
+  align-content: center;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+/* Media Queries */
+@media (max-width: 362px) {
+  .container {
+    min-width: 100%;
+    width: 100%;
+  }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Review</title>
+  <meta name="description" content="A page example of how to create a form and persisting data in the localStorage">
+  <meta name="author" content="Ederson Villalba">
+  <link rel="stylesheet" href="styles/form.css">
+</head>
+
+<body>
+  <header>
+    <h1>Product Review</h1>
+  </header>
+  <main>
+    <div class="container bg-container">
+      <form id="fm1" action="review.html" method="get">
+        <fieldset>
+          <legend>Product Name <span class="field-required">*</span></legend>
+          <select name="pName" id="pName" required>
+            <option value="" disabled selected>Select a product...</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Overall Rating <span class="field-required">*</span></legend>
+          <div class="rating">
+            <label for="star-1">
+              ★
+              <input type="radio" name="pStar" id="star-1" value="1" required>
+            </label>
+            <label for="star-2">
+              ★★
+              <input type="radio" name="pStar" id="star-2" value="2" required>
+            </label>
+            <label for="star-3">
+              ★★★
+              <input type="radio" name="pStar" id="star-3" value="3" required>
+            </label>
+            <label for="star-4">
+              ★★★★
+              <input type="radio" name="pStar" id="star-4" value="4" required>
+            </label>
+            <label for="star-5">
+              ★★★★★
+              <input type="radio" name="pStar" id="star-5" value="5" required>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Date of installation <span class="field-required">*</span></legend>
+          <input type="date" name="pDate" id="pDate" required>
+        </fieldset>
+
+        <fieldset id="checkbox">
+          <legend>Which features did you find usefull in the product?<br>
+            <span><i>(Check all that apply)</i></span>
+          </legend>
+          <label for="pDurability">
+            <input type="checkbox" name="pDurability" id="pDurability" value="durability">
+            Durability
+          </label>
+          <label for="pUse">
+            <input type="checkbox" name="pUse" id="pUse" value="ease">
+            Ease of use
+          </label>
+          <label for="pPerformance">
+            <input type="checkbox" name="pPerformance" id="pPerformance" value="performance">
+            Performance
+          </label>
+          <label for="pDesing">
+            <input type="checkbox" name="pDesing" id="pDesing" value="design">
+            Design
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Written Review <span>(Optional)</span></legend>
+          <textarea name="pReview" id="pReview" rows="4" placeholder="Enter a comment about your review"></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your name <span>(Optional)</span></legend>
+          <input type="text" name="uName" id="uName" placeholder="John Doe">
+        </fieldset>
+
+        <input type="submit" id="handleSubmit" value="Post Review">
+      </form>
+    </div>
+  </main>
+  <footer>
+    <div>
+      <p>©<span id="currentyear"></span> - <span class="color-name">Ederson Villalba</span>, Venezuela</p>
+      <p>Last update: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/form.js" defer></script>
+</body>
+
+</html>
